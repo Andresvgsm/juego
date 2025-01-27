@@ -9,14 +9,21 @@
 </head>
 
 <body>
-    <div class="pantalla_principal">
+    <div class="pantalla_principal" class="pantalla activa">
         <div id="titulo">TITULO</div>
-        <button id="iniciar">INICIAR</button>
+        <button onclick="cambiarPantalla('juego')" id="iniciar">Iniciar Juego</button>
         <button id="ajustes">AJUSTES</button>
         <button id="cargar">CARGAR PARTIDA GUARDADA</button>
     </div>
 
-    <div class="contenedor">
+    <div id="juego" class="pantalla" class="personajes">
+        <div id="guerrero" class="clases">Guerrero</div>
+        <div id="arquero" class="clases">Arquero</div>
+        <div id="mago" class="clases">Mago</div>
+
+    </div>
+
+    <div class="animacion">
         <img src="../imagenes/nube1 (2).png" class="div-animado div1" alt="" width="200px">
         <img src="../imagenes/nube1 (2).png" class="div-animado div2" alt="" width="200px">
         <img src="../imagenes/nube1 (2).png" class="div-animado div3" alt="" width="200px">
@@ -64,6 +71,8 @@
         <img src="../imagenes/nube1 (2).png" class="div-animado div45" alt="" width="200px">
         <img src="../imagenes/nube1 (2).png" class="div-animado div46" alt="" width="200px">
     </div>
+
+    
     <script src="inicio.js"></script>
 </body>
 
