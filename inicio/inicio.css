@@ -1,17 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: #121212;
     font-family: Arial, sans-serif;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .pantalla_principal {
-    text-align: center;
     background-color: #1f1f1f;
     padding: 20px;
     border-radius: 15px;
@@ -32,22 +32,22 @@ body {
 
 .personajes {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    gap: 20px;
 }
 
 .clases {
-    width: 100px;
-    height: 100px;
+    width: 25%;
     background-color: red;
     border: 1px solid;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: white;
     font-weight: bold;
     font-size: 16px;
@@ -60,17 +60,7 @@ body {
     background-color: #ff4d4d;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #121212;
-    font-family: Arial, sans-serif;
-    color: #fff;
-}
+
 
 #titulo {
     font-size: 24px;
@@ -113,350 +103,19 @@ button:active {
     left: -0%;
 }
 
-.div2 {
-    top: -0%;
-    right: -0%;
-}
-
-.div3 {
-    bottom: -0%;
-    left: -0%;
-}
-
-.div4 {
-    bottom: -0%;
-    right: -0%;
-}
-
-.div5 {
-    bottom: -0%;
-    right: -0%;
-}
-
-.div6 {
-    bottom: -0%;
-    right: -0%;
-}
-
-.div7 {
-    top: -0%;
-    left: -0%;
-}
-
-.div8 {
-    top: -0%;
-    right: -0%;
-}
-
-.div9 {
-    bottom: -0%;
-    left: -0%;
-}
-
-.div10 {
-    bottom: -0%;
-    right: -0%;
-}
-
-.div11 {
-    bottom: -0%;
-    right: -0%;
-}
-
-.div12 {
-    bottom: -0%;
-    right: -0%;
-}
 
 .activo {
     opacity: 1;
 }
 
-.div1.activo {
-    top: -10%;
-    left: -10%;
-    width: 55%;
-}
-
-.div2.activo {
-    top: -10%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-
-.div3.activo {
-    top: -5%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-
-.div4.activo {
-    top: -5%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div5.activo {
-    top: -0%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div6.activo {
-    top: -0%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div7.activo {
-    top: 5%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-
-.div8.activo {
-    top: 5%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div9.activo {
-    top: 10%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div10.activo {
-    top: 10%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div11.activo {
-    top: 15%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div12.activo {
-    top: 15%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div13.activo {
-    top: 20%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div14.activo {
-    top: 20%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div15.activo {
-    top: 25%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div16.activo {
-    top: 25%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div17.activo {
-    top: 30%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div18.activo {
-    top: 30%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div19.activo {
-    top: 35%;
-    left: -10%;
-    width: 55%;
-}
-
-.div20.activo {
-    top: 35%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-
-.div21.activo {
-    top: 40%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-
-.div22.activo {
-    top: 40%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div23.activo {
-    top: 45%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div24.activo {
-    top: 45%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div25.activo {
-    top: 50%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-
-.div26.activo {
-    top: 50%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div27.activo {
-    top: 55%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div28.activo {
-    top: 55%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div29.activo {
-    top: 60%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div30.activo {
-    top: 60%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div31.activo {
-    top: 65%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div32.activo {
-    top: 65%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-
-.div33.activo {
-    top: 70%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div34.activo {
-    top: 70%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div35.activo {
-    top: 75%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div36.activo {
-    top: 75%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div37.activo {
-    top: 80%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div38.activo {
-    top: 80%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div39.activo {
-    top: 85%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div40.activo {
-    top: 85%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div41.activo {
-    top: 90%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div42.activo {
-    top: 90%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div43.activo {
-    top: 95%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div44.activo {
-    top: 95%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div45.activo {
-    top: 100%;
-    right: -10%;
-    width: 55%;
-    height: 18%;
-}
-.div46.activo {
-    top: 100%;
-    left: -10%;
-    width: 55%;
-    height: 18%;
-}
 
 .oculto{
     opacity: 0;
+}
+
+#intro{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
 }
 
