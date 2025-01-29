@@ -48,6 +48,8 @@ body {
     margin: 0 auto;
     gap: 20px;
 }
+.presentacion_pers{
+}
 
 .clases {
     height: 25%;
@@ -96,12 +98,22 @@ body {
     background-color: #003d7a;
 }
 
-.botones_sel{
+ .clases{
     height: 20vw;
     border: none;
-    border-radius: 8px;
+    border-radius: 10%;
+    border: 5px solid;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: black;
+}
+.botones_sel{
+    display: flex;
+    height: 20vw;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    flex-direction: column;
+    background-color: transparent;
 }
 
 .div-animado {
