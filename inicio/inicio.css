@@ -2,7 +2,9 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: #121212;
+    background-image:url(../imagenes/Fondo_inicio.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
     font-family: Arial, sans-serif;
     color: #fff;
     display: flex;
@@ -19,6 +21,12 @@ body {
     width: 300px;
     transition: opacity 1s ease;
 }
+.pantalla_principal.oculto {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
 
 .pantalla {
     display: none;
@@ -42,15 +50,13 @@ body {
 }
 
 .clases {
-    width: 25%;
+    height: 25%;
     background-color: red;
     border: 1px solid;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     font-weight: bold;
-    font-size: 16px;
     border-radius: 8px;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -68,7 +74,7 @@ body {
     margin-bottom: 20px;
 }
 
-button {
+.botones_inicio {
     display: block;
     width: 100%;
     margin: 10px 0;
@@ -82,16 +88,25 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.botones_inicio:hover {
     background-color: #0056b3;
 }
 
-button:active {
+.botones_inicio:active {
     background-color: #003d7a;
+}
+
+.botones_sel{
+    height: 20vw;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #007bff;
 }
 
 .div-animado {
     position: absolute;
+    width: 10vw;
     width: 20%;
     height: 20%;
     opacity: 0;
@@ -114,8 +129,12 @@ button:active {
 }
 
 #intro{
+    position: fixed;
+    top: 0;
     width: 100vw;
-    display: flex;
-    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
 }
 

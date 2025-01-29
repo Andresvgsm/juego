@@ -11,16 +11,16 @@
 <body>
     <div class="pantalla_principal" class="pantalla">
         <div id="titulo">TITULO</div>
-        <button onclick="cambiarPantalla('juego')" id="iniciar">Iniciar Juego</button>
-        <button id="ajustes">AJUSTES</button>
-        <button id="cargar">CARGAR PARTIDA GUARDADA</button>
+        <button onclick="cambiarPantalla('juego')" id="iniciar" class="botones_inicio">Iniciar Juego</button>
+        <button id="ajustes" class="botones_inicio">AJUSTES</button>
+        <button id="cargar" class="botones_inicio">CARGAR PARTIDA GUARDADA</button>
     </div>
 
     <div id="juego" class="pantalla" class="personajes">
-        <img id="guerrero" class="clases" src="../imagenes/guerrero.png" alt="guerrero">
-        <img id="arquero" class="clases" src="../imagenes/arquero.png" alt="arquero">
-        <img id="mago" class="clases"  src="../imagenes/mago.png" alt="mago">
-
+        <button class="botones_sel"><img id="guerrero" class="clases" src="../imagenes/guerrero.png" alt="guerrero"></button>
+        <button class="botones_sel"><img id="arquero" class="clases" src="../imagenes/arquero.png" alt="arquero"></button>
+        <button class="botones_sel"><img id="mago" class="clases"  src="../imagenes/mago.png" alt="mago"></button>
+    
     </div>
 
     <div class="animacion" id="intro">
