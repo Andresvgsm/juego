@@ -14,8 +14,8 @@ boton_iniciar.addEventListener('click', () => {
         const img = document.createElement('img');
         img.src = '../imagenes/nube1 (2).png';
         img.className = 'div-animado div1';
-        const posX = Math.random() * window.innerWidth*-0.1;
-        const posY = Math.random() * window.innerHeight*-0.1;
+        const posX = Math.random() * window.innerWidth * -0.1;
+        const posY = Math.random() * window.innerHeight * -0.1;
 
         img.style.left = `${posX}px`;
         img.style.top = `${posY}px`;
@@ -49,7 +49,7 @@ boton_iniciar.addEventListener('click', () => {
 
         intro.appendChild(img);
     }
-    
+
     for (let i = 0; i < 400; i++) {
         const img = document.createElement('img');
         img.src = '../imagenes/nube1 (2).png';
@@ -63,8 +63,8 @@ boton_iniciar.addEventListener('click', () => {
 
         intro.appendChild(img);
     }
-    
-    
+
+
 
     const divs = document.querySelectorAll('.div-animado');
 
@@ -77,7 +77,7 @@ boton_iniciar.addEventListener('click', () => {
         divs.forEach(div => {
             div.classList.add('oculto');
         });
-        
+
 
         pantalla_principal.style.opacity = "0";
         pantalla_principal.style.pointerEvents = "none";
@@ -85,10 +85,10 @@ boton_iniciar.addEventListener('click', () => {
         intro.classList.add('oculto');
         pantalla_principal.remove();
         setTimeout(() => {
-            
+
             cambiarPantalla('juego');
         }, 1000);
-        
+
     }, 5000);
 });
 
@@ -116,3 +116,24 @@ boton_ajustes.addEventListener('click', () => {
 boton_cargar.addEventListener('click', () => {
     alert('Cargando partida guardada...');
 });
+
+var canvas = document.getElementById('animacion');
+var ctx = canvas.getContext('2d');
+var video = document.getElementById('video');
+
+function video(video) {
+    video.addEventListener('loadedmetadata', function () {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+    });
+
+    video.addEventListener('play', function () {
+        var $this = this;
+        (function loop() {
+            if (!$this.paused && !$this.ended) {
+                ctx.drawImage($this, 0, 0);
+                setTimeout(loop, 1000 / 30);
+            }
+        })();
+    }, 0);
+}

@@ -31,7 +31,6 @@ body {
 .pantalla {
     display: none;
     text-align: center;
-    padding: 50px;
     font-size: 24px;
 }
 .pantalla.activa {
@@ -44,12 +43,36 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    height: 100%;
     max-width: 800px;
     margin: 0 auto;
     gap: 20px;
+
 }
-.presentacion_pers{
+#juego {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
 }
+
+#botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.presentacion_pers {
+    width: 65%;
+    height: 80%; 
+    border: 2px solid white;
+}
+
 
 .clases {
     height: 25%;
@@ -98,23 +121,30 @@ body {
     background-color: #003d7a;
 }
 
- .clases{
+
+.botones_sel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
     height: 20vw;
     border: none;
     border-radius: 10%;
-    border: 5px solid;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+}
+
+.clases {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+    border-radius: 10%;
     cursor: pointer;
     background-color: black;
 }
-.botones_sel{
-    display: flex;
-    height: 20vw;
-    border: none;
-    border-radius: 5%;
-    cursor: pointer;
-    flex-direction: column;
-    background-color: transparent;
-}
+
 
 .div-animado {
     position: absolute;
