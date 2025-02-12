@@ -8,23 +8,13 @@
     <link rel="stylesheet" href="inicio.css">
 </head>
 
-<body>
+<body id="contenido">
     <div class="pantalla_principal" class="pantalla">
         <div id="titulo">TITULO</div>
-        <button onclick="cambiarPantalla('juego')" id="iniciar" class="botones_inicio">Iniciar Juego</button>
+        <button  id="iniciar" class="botones_inicio">Iniciar Juego</button>
         <button id="ajustes" class="botones_inicio">AJUSTES</button>
         <button id="cargar" class="botones_inicio">CARGAR PARTIDA GUARDADA</button>
-    </div>
-
-    <div id="juego" class="pantalla" class="personajes">
-        <div id="botones">
-        <button class="botones_sel" onclick=video()><img id="guerrero" class="clases" src="../imagenes/guerrero.png" alt="guerrero"></button>
-        <button class="botones_sel"><img id="arquero" class="clases" src="../imagenes/arquero.png" alt="arquero"></button>
-        <button class="botones_sel"><img id="mago" class="clases"  src="../imagenes/mago.png" alt="mago"></button>
-        </div>
-        
-        <canvas class="presentacion_pers"></canvas>
-        
+        <button id="cambiarhtml"> cambiarhtml</button>
     </div>
 
     <div class="animacion" id="intro">

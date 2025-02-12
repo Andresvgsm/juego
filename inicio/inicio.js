@@ -1,120 +1,124 @@
 const boton_iniciar = document.getElementById('iniciar');
 const boton_ajustes = document.getElementById('ajustes');
 const boton_cargar = document.getElementById('cargar');
+const boton_cambiar = document.getElementById('cambiarhtml');
+
+const boton_guerrero = document.getElementById('boton_guerrero');
+const boton_mago = document.getElementById('boton_mago');
+const boton_arquero = document.getElementById('boton_arquero');
+let contadorClics = 0;
+let temporizador;
+
 const intro = document.getElementById('intro');
 const pantalla_principal = document.querySelector('.pantalla_principal');
 
 
 boton_iniciar.addEventListener('click', () => {
-
+    
     boton_iniciar.disabled = true;
     boton_ajustes.disabled = true;
     boton_cargar.disabled = true;
-    for (let i = 0; i < 50; i++) {
-        const img = document.createElement('img');
-        img.src = '../imagenes/nube1 (2).png';
-        img.className = 'div-animado div1';
-        const posX = Math.random() * window.innerWidth * -0.1;
-        const posY = Math.random() * window.innerHeight * -0.1;
-
-        img.style.left = `${posX}px`;
-        img.style.top = `${posY}px`;
-        img.style.position = 'absolute';
-
-        intro.appendChild(img);
-    }
-    for (let i = 0; i < 300; i++) {
-        const img = document.createElement('img');
-        img.src = '../imagenes/nube1 (2).png';
-        img.className = 'div-animado div1';
-        const posX = Math.random() * window.innerWidth * -0.1;
-        const posY = Math.random() * window.innerHeight;
-
-        img.style.left = `${posX}px`;
-        img.style.top = `${posY}px`;
-        img.style.position = 'absolute';
-
-        intro.appendChild(img);
-    }
-    for (let i = 0; i < 100; i++) {
-        const img = document.createElement('img');
-        img.src = '../imagenes/nube1 (2).png';
-        img.className = 'div-animado div1';
-        const posX = Math.random() * window.innerWidth;
-        const posY = Math.random() * window.innerHeight * -0.1;
-
-        img.style.left = `${posX}px`;
-        img.style.top = `${posY}px`;
-        img.style.position = 'absolute';
-
-        intro.appendChild(img);
-    }
-
-    for (let i = 0; i < 400; i++) {
-        const img = document.createElement('img');
-        img.src = '../imagenes/nube1 (2).png';
-        img.className = 'div-animado div1';
-        const posX = Math.random() * window.innerWidth * 0.9;
-        const posY = Math.random() * window.innerHeight * 0.9;
-
-        img.style.left = `${posX}px`;
-        img.style.top = `${posY}px`;
-        img.style.position = 'absolute';
-
-        intro.appendChild(img);
-    }
-
-
-
-    const divs = document.querySelectorAll('.div-animado');
-
-    divs.forEach((div, index) => {
-        setTimeout(() => {
-            div.classList.add('activo');
-        }, index * 1);
-    });
+    
+    animacion()
     setTimeout(() => {
-        divs.forEach(div => {
-            div.classList.add('oculto');
-        });
-
-
-        pantalla_principal.style.opacity = "0";
-        pantalla_principal.style.pointerEvents = "none";
-        pantalla_principal.classList.add('oculto');
-        intro.classList.add('oculto');
-        pantalla_principal.remove();
-        setTimeout(() => {
-
-            cambiarPantalla('juego');
-        }, 1000);
-
-    }, 5000);
+        cargarPagina('extras/seleccionPers.html')
+    }, 5500);
+    
 });
 
-function cambiarPantalla(idPantalla) {
-    try {
-        const pantallas = document.querySelectorAll('.pantalla');
-        pantallas.forEach(pantalla => pantalla.classList.remove('activa'));
 
-        const pantallaSeleccionada = document.getElementById(idPantalla);
-        if (pantallaSeleccionada) {
-            pantallaSeleccionada.classList.add('activa');
-        } else {
-            console.error(`Pantalla con id "${idPantalla}" no encontrada.`);
+    function animacion(){
+        for (let i = 0; i < 50; i++) {
+            const img = document.createElement('img');
+            img.src = '../imagenes/nube1 (2).png';
+            img.className = 'div-animado div1';
+            const posX = Math.random() * window.innerWidth * -0.1;
+            const posY = Math.random() * window.innerHeight * -0.1;
+    
+            img.style.left = `${posX}px`;
+            img.style.top = `${posY}px`;
+            img.style.position = 'absolute';
+    
+            intro.appendChild(img);
         }
-    } catch (error) {
-        console.error('Error al cambiar de pantalla:', error);
+        for (let i = 0; i < 100; i++) {
+            const img = document.createElement('img');
+            img.src = '../imagenes/nube1 (2).png';
+            img.className = 'div-animado div1';
+            const posX = Math.random() * window.innerWidth * -0.1;
+            const posY = Math.random() * window.innerHeight;
+    
+            img.style.left = `${posX}px`;
+            img.style.top = `${posY}px`;
+            img.style.position = 'absolute';
+    
+            intro.appendChild(img);
+        }
+        for (let i = 0; i < 100; i++) {
+            const img = document.createElement('img');
+            img.src = '../imagenes/nube1 (2).png';
+            img.className = 'div-animado div1';
+            const posX = Math.random() * window.innerWidth;
+            const posY = Math.random() * window.innerHeight * -0.1;
+    
+            img.style.left = `${posX}px`;
+            img.style.top = `${posY}px`;
+            img.style.position = 'absolute';
+    
+            intro.appendChild(img);
+        }
+    
+        for (let i = 0; i < 400; i++) {
+            const img = document.createElement('img');
+            img.src = '../imagenes/nube1 (2).png';
+            img.className = 'div-animado div1';
+            const posX = Math.random() * window.innerWidth * 0.9;
+            const posY = Math.random() * window.innerHeight * 0.9;
+    
+            img.style.left = `${posX}px`;
+            img.style.top = `${posY}px`;
+            img.style.position = 'absolute';
+    
+            intro.appendChild(img);
+        }
+    
+    
+    
+        const divs = document.querySelectorAll('.div-animado');
+    
+        divs.forEach((div, index) => {
+            setTimeout(() => {
+                div.classList.add('activo');
+            }, index * 1);
+        });
+        setTimeout(() => {
+            divs.forEach(div => {
+                div.classList.add('oculto');
+            });
+            
+        }, 5000);
+        
+    
     }
-}
+    function cargarPagina(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("contenido").innerHTML = html;
+            })
+            .alert(error => console.error("Error cargando la página:", error));
+    }
+
 
 
 boton_ajustes.addEventListener('click', () => {
     cambiarPantalla(juego)
 });
+boton_cambiar.addEventListener('click', () => {
+    cargarPagina('seleccionPers.html')});
 
 boton_cargar.addEventListener('click', () => {
-    alert('Cargando partida guardada...');
+    alert('Todavia no has guardado ninguna partida genio.');
 });
 
 var canvas = document.getElementById('animacion');
@@ -136,4 +140,43 @@ function video(video) {
             }
         })();
     }, 0);
+}
+
+function accionClick(personaje) {
+    contadorClics++;
+
+    clearTimeout(temporizador); 
+
+    temporizador = setTimeout(() => {
+        switch (personaje) {
+            case "mago":
+                if (contadorClics === 1) {
+                    alert("🧙‍♂️ El mago lanza un hechizo de fuego.");
+                } else if (contadorClics === 2) {
+                    alert("🔥 El mago lanza una tormenta mágica.");
+                }
+                break;
+            
+            case "guerrero":
+                if (contadorClics === 1) {
+                    alert("⚔️ El guerrero golpea con su espada.");
+                } else if (contadorClics === 2) {
+                    alert("💥 El guerrero realiza un ataque especial.");
+                }
+                break;
+
+            case "arquero":
+                if (contadorClics === 1) {
+                    alert("🏹 El arquero dispara una flecha.");
+                } else if (contadorClics === 2) {
+                    alert("🎯 El arquero dispara una ráfaga de flechas.");
+                }
+                break;
+
+            default:
+                alert("🤷 Personaje desconocido.");
+        }
+
+        contadorClics = 0; 
+    }, 300); 
 }
