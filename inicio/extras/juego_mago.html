@@ -8,15 +8,25 @@
     <link rel="stylesheet" href="../inicio.css">
 </head>
 
-<body id="contenido" class="batalla_mago">
+<body id="contenido">
+    <div class="batalla_mago" id="fondo"></div>
 
     <div class="personaje" id="prota">
-        <div id="mago"><img src="../imagenes/mago_accion.png" alt=""></div>
+        <div id="mago"><img src="imagenes/mago_accion.png" alt=""></div>
         <div id="vida1"></div>
     </div>
     <div class="personaje" id="enemigo">
-        <div id="enemy"><img src="../imagenes/arquero.png" alt=""></div>
+        <div id="enemy"><img src="imagenes/arquero.png" alt=""></div>
         <div id="vida2"></div>
+    </div>
+    <div id="seleccion_ataques">
+        <div class="ataque">
+            <button id="ataque1" class="ataques">Bola de fuego <img src="../../inicio/imagenes/bola_de.png" alt="bola de fuego"></button>
+            
+        </div>
+        <button id="ataque2" class="ataques">Tormenta <div><img src="" alt="Tormenta"></div></button>
+        <button id="ataque3" class="ataques">Tsunami <div><img src="" alt="Tsunami"></div></button>
+        <button id="curar" class="ataques">Curar <div><img src="" alt="curar"></div></button>
     </div>
 
     <div class="animacion" id="intro">

@@ -199,7 +199,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url(../imagenes/combate_bosque_encantado.png);
+    background-image: url(imagenes/combate_bosque_encantado.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -210,6 +210,14 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+#fondo{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .personaje {
@@ -256,4 +264,39 @@ body {
     background-color: green;
     margin-top: 5px;
     border: 1px solid #000;
+}
+.ataque{
+    display: flex;
+}
+
+#seleccion_ataques{
+    position: absolute;
+    bottom: 0%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: grey;
+    gap: 10px;
+    
+    height: 30%;
+    width: 100%;
+}
+
+.ataques {
+    width: 50%;
+    height: 60%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    
+}
+
+.ataque img{
+    width: 10%;
+    height: auto;
+    float: right;
+    margin-left: 82%;
 }

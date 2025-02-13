@@ -37,7 +37,7 @@ boton_iniciar.addEventListener('click', () => {
 function animacion() {
     for (let i = 0; i < 50; i++) {
         const img = document.createElement('img');
-        img.src = '../imagenes/nube1 (2).png';
+        img.src = 'imagenes/nube1 (2).png';
         img.className = 'div-animado div1';
         const posX = Math.random() * window.innerWidth * -0.1;
         const posY = Math.random() * window.innerHeight * -0.1;
@@ -50,7 +50,7 @@ function animacion() {
     }
     for (let i = 0; i < 100; i++) {
         const img = document.createElement('img');
-        img.src = '../imagenes/nube1 (2).png';
+        img.src = 'imagenes/nube1 (2).png';
         img.className = 'div-animado div1';
         const posX = Math.random() * window.innerWidth * -0.1;
         const posY = Math.random() * window.innerHeight;
@@ -63,7 +63,7 @@ function animacion() {
     }
     for (let i = 0; i < 100; i++) {
         const img = document.createElement('img');
-        img.src = '../imagenes/nube1 (2).png';
+        img.src = 'imagenes/nube1 (2).png';
         img.className = 'div-animado div1';
         const posX = Math.random() * window.innerWidth;
         const posY = Math.random() * window.innerHeight * -0.1;
@@ -77,7 +77,7 @@ function animacion() {
 
     for (let i = 0; i < 400; i++) {
         const img = document.createElement('img');
-        img.src = '../imagenes/nube1 (2).png';
+        img.src = 'imagenes/nube1 (2).png';
         img.className = 'div-animado div1';
         const posX = Math.random() * window.innerWidth * 0.9;
         const posY = Math.random() * window.innerHeight * 0.9;
