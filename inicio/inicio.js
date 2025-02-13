@@ -1,7 +1,6 @@
 const boton_iniciar = document.getElementById('iniciar');
 const boton_ajustes = document.getElementById('ajustes');
 const boton_cargar = document.getElementById('cargar');
-const boton_cambiar = document.getElementById('cambiarhtml');
 
 const boton_guerrero = document.getElementById('boton_guerrero');
 const boton_mago = document.getElementById('boton_mago');
@@ -153,7 +152,7 @@ function accionClick(personaje) {
                 if (contadorClics === 1) {
                     alert("🧙‍♂️ El mago lanza un hechizo de fuego.");
                 } else if (contadorClics === 2) {
-                    alert("🔥 El mago lanza una tormenta mágica.");
+                    cargarPagina('extras/juego_mago.html')
                 }
                 break;
             
@@ -172,9 +171,6 @@ function accionClick(personaje) {
                     alert("🎯 El arquero dispara una ráfaga de flechas.");
                 }
                 break;
-
-            default:
-                alert("🤷 Personaje desconocido.");
         }
 
         contadorClics = 0; 

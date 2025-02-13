@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(../../imagenes/combate_bosque_encantado.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.personaje {
+    position: absolute;
+}
+
+#prota {
+    top: 35%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mago img {
+    width: 50%;
+    height: auto;
+}
+
+#enemigo {
+    top: 35%;
+    right: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#enemigo img {
+    width: 50%;
+    height: auto;
+}
+
+#vida1 {
+    width: 50%;
+    height: 10px;
+    background-color: green;
+    margin-top: 5px;
+    border: 1px solid #000;
+}
+#vida2 {
+    width: 50%;
+    height: 10px;
+    background-color: green;
+    margin-top: 5px;
+    border: 1px solid #000;
+}
+
+
