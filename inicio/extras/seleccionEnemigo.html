@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="../inicio.css">
 </head>
 
 <body id="contenido">
-    <div id="titulo_eleccion">Elige tu personaje</div>
-    <div id="juego" class="pantalla personajes">
+    <div id="titulo_eleccion">Elige tu enemigo</div>
+    <div id="juego_enemigo" class="pantalla personajes">
+        <canvas class="presentacion_pers"></canvas>
         <div id="botones">
-            <button id="boton_guerrero" class="botones_sel" onclick="accionClick('guerrero')"><img id="guerrero"
+            <button id="boton_guerrero_enemigo" class="botones_sel" onclick="accionClick('guerrero_enemigo')"><img id="guerrero"
                     class="clases" src="../imagenes/guerrero.png" alt="guerrero"></button>
-            <button id="boton_arquero" class="botones_sel" onclick="accionClick('arquero')"><img id="arquero"
+            <button id="boton_arquero_enemigo" class="botones_sel" onclick="accionClick('arquero_enemigo')"><img id="arquero"
                     class="clases" src="../imagenes/arquero.png" alt="arquero"></button>
-            <button id="boton_mago" class="botones_sel" onclick="accionClick('mago')"><img id="mago" class="clases"
+            <button id="boton_mago_enemigo" class="botones_sel" onclick="accionClick('mago_enemigo')"><img id="mago" class="clases"
                     src="../imagenes/mago.png" alt="mago"></button>
         </div>
 
-        <canvas class="presentacion_pers"></canvas>
+        
 
     </div>
 
