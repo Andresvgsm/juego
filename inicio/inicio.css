@@ -188,7 +188,7 @@ body {
     z-index: 10;
 }
 
-#titulo_eleccion{
+#titulo_eleccion {
     font-size: 300%;
     font-weight: bold;
     position: absolute;
@@ -211,7 +211,8 @@ body {
     position: relative;
     overflow: hidden;
 }
-#fondo{
+
+#fondo {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -265,18 +266,15 @@ body {
     margin-top: 5px;
     border: 1px solid #000;
 }
-.ataque{
-    display: flex;
-}
 
-#seleccion_ataques{
+
+#seleccion_ataques {
     position: absolute;
     bottom: 0%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: grey;
     gap: 10px;
-    
     height: 30%;
     width: 100%;
 }
@@ -291,12 +289,5 @@ body {
     background-color: black;
     color: white;
     font-size: 18px;
-    
-}
-
-.ataque img{
-    width: 10%;
-    height: auto;
-    float: right;
-    margin-left: 82%;
+    justify-content: space-between
 }

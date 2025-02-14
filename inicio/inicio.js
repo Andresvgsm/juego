@@ -10,10 +10,19 @@ const boton_guerrero_enemigo = document.getElementById('boton_guerrero_enemigo')
 const boton_mago_enemigo = document.getElementById('boton_mago_enemigo');
 const boton_arquero_enemigo = document.getElementById('boton_arquero_enemigo');
 
+const boton_ataque1 = document.getElementById('ataque1');
+const boton_ataque2 = document.getElementById('ataque2');
+const boton_ataque3 = document.getElementById('ataque3');
+const boton_ataque4 = document.getElementById('ataque4');
+
 let contadorClics = 0;
 let temporizador;
 let prota;
 let enemigo;
+let vida_mago = 100;
+let vida_guerrero = 150;
+let vida_arquero = 120;
+let vida_enemigo = 0;
 
 const intro = document.getElementById('intro');
 const pantalla_principal = document.querySelector('.pantalla_principal');
@@ -29,10 +38,9 @@ boton_iniciar.addEventListener('click', () => {
     setTimeout(() => {
         cargarPagina('extras/seleccionPers.html')
         var ctx = canvas.getContext('2d');
-    }, 5500);
-    
-});
+    }, 2200);
 
+});
 
 function animacion() {
     for (let i = 0; i < 50; i++) {
@@ -103,7 +111,7 @@ function animacion() {
             div.classList.add('oculto');
         });
 
-    }, 5000);
+    }, 2000);
 
 
 }
@@ -158,7 +166,7 @@ function accionClick(personaje) {
                 if (contadorClics === 1) {
                     alert("🧙‍♂️ El mago lanza un hechizo de fuego.");
                 } else if (contadorClics === 2) {
-                    prota = "mago"
+
                     cargarPagina('extras/seleccionEnemigo.html')
                 }
                 break;
@@ -183,6 +191,7 @@ function accionClick(personaje) {
                     alert("🧙‍♂️ El mago lanza un hechizo de fuego.");
                 } else if (contadorClics === 2) {
                     enemigo = "mago"
+                    vida_enemigo = 100;
                     cargarPagina('extras/juego_mago.html')
                 }
                 break;
@@ -206,4 +215,48 @@ function accionClick(personaje) {
 
         contadorClics = 0;
     }, 300);
+}
+
+function inicializarAtaques(prota, ataque) {
+
+    switch (prota) {
+        case "mago":
+            switch (ataque) {
+                case 1:
+                    vida_enemigo -= 10;
+                    alert(`🔥 El mago lanza una bola de fuego. Vida enemigo: ${vida_enemigo}`);
+                    vida_mago -= 5;
+                    alert(`el enemigo ataca con una fuerza similar a la tuya: ${vida_mago}`);
+                    break;
+                case 2:
+                    vida_enemigo -= 15;
+                    alert(`🔥 El mago lanza una tormenta. Vida enemigo: ${vida_enemigo}`);
+                    break;
+                case 3:
+                    vida_enemigo -= 20;
+                    alert(`🔥 El mago lanza un tsunami. Vida enemigo: ${vida_enemigo}`);
+                    break;
+                case 4:
+                    vida_prota += 10;
+                    alert(`✨ El mago se cura. Vida protagonista: ${vida_prota}`);
+                    break;
+                default:
+                    alert("⚠️ Opción inválida.");
+            }
+
+
+        case "guerrero":
+            boton_ataque1.addEventListener('click', () => {
+                vida_enemigo -= 15;
+                alert(`⚔️ El guerrero golpea con su espada. Vida enemigo: ${vida_enemigo}`);
+            });
+            break;
+
+        case "arquero":
+            boton_ataque1.addEventListener('click', () => {
+                vida_enemigo -= 8;
+                alert(`🏹 El arquero dispara una flecha. Vida enemigo: ${vida_enemigo}`);
+            });
+            break;
+    }
 }
