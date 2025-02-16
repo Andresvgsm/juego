@@ -15,14 +15,20 @@ body {
 }
 
 .pantalla_principal {
-    background-color: #1f1f1f;
+    background-image: url(imagenes/lost_legends_logo.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     width: 300px;
+    height: 300px;
     transition: opacity 1s ease;
     position: absolute;
     z-index: 10;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
 .pantalla_principal.oculto {
@@ -109,7 +115,7 @@ body {
 .botones_inicio {
     display: block;
     width: 100%;
-    margin: 10px 0;
+    margin: 11% 0;
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -344,7 +350,7 @@ body {
 .barra-contenedor {
     width: 200px;
     height: 20px;
-    background-color: gray;
+    background-color: red;
     border-radius: 5px;
     overflow: hidden;
 }

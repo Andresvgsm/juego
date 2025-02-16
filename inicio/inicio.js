@@ -129,7 +129,8 @@ function cargarPagina(url) {
 
 
 boton_ajustes.addEventListener('click', () => {
-    alert('Aun no esta disponible esta opcion');
+    window.open('https://youtu.be/klHKXJdSHp4')
+
 });
 
 boton_cargar.addEventListener('click', () => {
@@ -166,17 +167,24 @@ function accionClick(personaje) {
         switch (personaje) {
             case "mago":
                 if (contadorClics === 1) {
-                    alert("🧙‍♂️ El mago lanza un hechizo de fuego.");
+                    document.getElementById("presentacion_pers").innerHTML = `
+        Desde muy pequeño, <strong>Aldren</strong>, un joven con un talento innato para la magia, sintió una atracción especial por los poderes sobrenaturales. Mientras otros niños jugaban con juguetes y soñaban con aventuras comunes, él pasaba horas explorando antiguos grimorios, observando los misterios del universo y sintiendo la energía vibrante de la naturaleza a su alrededor. Sin embargo, su destino quedó sellado la noche en que la oscuridad se llevó lo que más amaba.<br><br>
+        Sus padres, poderosos hechiceros guardianes del equilibrio entre el bien y el mal, fueron brutalmente asesinados en una despiadada disputa contra las fuerzas de la oscuridad. Aquella noche, Aldren fue testigo de su impotencia, escondido entre las sombras, mientras criaturas de pesadilla aniquilaban a su familia. Su hogar quedó reducido a cenizas y, con él, su infancia.<br><br>
+        Desde entonces, su único propósito ha sido la venganza y la erradicación definitiva del mal que arrebató su felicidad. A lo largo de los años, perfeccionó su arte, dominando los hechizos más poderosos jamás concebidos. Su magia, extraída de la propia esencia de la naturaleza, le permite invocar tormentas, moldear el fuego, controlar los vientos y hasta alterar el flujo de los ríos. Ha viajado por tierras olvidadas en busca de conocimiento, enfrentando criaturas ancestrales y desafiando a las entidades más temidas del mundo arcano.<br><br>
+        Pero la venganza no es su único propósito. Aunque el odio lo consume, en el fondo de su alma aún brilla un vestigio de esperanza: el deseo de restaurar el equilibrio y evitar que otros sufran su misma pérdida. Porque él no solo busca derrotar a las fuerzas del mal, sino asegurarse de que nunca más puedan alzarse de nuevo.
+    `;
                 } else if (contadorClics === 2) {
-                    prota == 'mago';
                     cargarPagina('extras/juego_mago.html')
-                    
                 }
                 break;
 
             case "guerrero":
                 if (contadorClics === 1) {
-                    alert("⚔️ El guerrero golpea con su espada.");
+                    document.getElementById("presentacion_pers").innerHTML = `
+<strong>Kael</strong>, nacido en la realeza y criado en la corte del rey, creció rodeado de estrictas enseñanzas en el arte de la guerra. Desde su infancia, empuñó la espada con destreza, entrenando bajo la tutela de los mejores combatientes del reino. No solo dominó el combate cuerpo a cuerpo, sino también perfeccionó sus conocimientos en tácticas militares y estrategia, convirtiéndose en un prodigio de la espada y la mente.<br><br>       
+Aunque su vida en la corte era de lujo, Kael se dedicó incansablemente al entrenamiento. Su padre, un renombrado general, le enseñó que el verdadero poder no residía en la fuerza física, sino en la voluntad de luchar por una causa justa. Su vida fue un constante sacrificio, marcado por el deber de proteger a su reino y a su gente.<br><br>
+A lo largo de los años, Kael participó en innumerables batallas contra criaturas demoníacas y guerreros oscuros. Cada cicatriz en su cuerpo contaba una historia de lucha y resistencia, y su nombre se convirtió en leyenda en los campos de guerra. Como líder, infundía valentía a sus tropas, y su presencia en el campo de batalla significaba una victoria casi segura para sus aliados.<br><br>
+Sin embargo, Kael lucha por algo más grande que su reino. En su corazón, sabe que la guerra que enfrenta no es solo contra fuerzas malvadas, sino contra una amenaza mucho más antigua que acecha desde las sombras. Aunque su fama crece con cada victoria, Kael entiende que su verdadera prueba aún está por venir, y que solo aquellos dispuestos a sacrificarse podrán enfrentarse al mal que consume el mundo. `;
                 } else if (contadorClics === 2) {
                     cargarPagina('extras/juego_guerrero.html')
                 }
@@ -184,12 +192,17 @@ function accionClick(personaje) {
 
             case "arquero":
                 if (contadorClics === 1) {
-                    alert("🏹 El arquero dispara una flecha.");
+                    document.getElementById("presentacion_pers").innerHTML = `
+En las profundidades de un bosque antiguo, <strong>Aelira</strong>, la arquera, vive dedicada al bienestar de la naturaleza y sus habitantes. Con un corazón puro, se ha convertido en la protectora del bosque, defendiendo su hogar y a sus criaturas con valentía. Su habilidad con el arco es legendaria, y su coraje ha sido demostrado en numerosas batallas contra invasores y criaturas salvajes. Aunque no busca gloria, su nombre es sinónimo de esperanza para quienes la conocen.<br><br>       
+Lo que realmente define a Aelira es su sentido de justicia y su deseo de proteger todo ser vivo. Con su arco y su corazón limpio, se asegura de mantener el equilibrio del bosque, sacrificando mucho para preservar su paz. Cada ser, por pequeño que sea, merece protección, y ha hecho todo lo posible para que la armonía prevalezca.<br><br>
+A pesar de su vida silenciosa en la oscuridad de los árboles, el legado de Aelira perdura en los relatos de quienes ha salvado. Recordada por su valentía y amor por la naturaleza, es una heroína que protege lo que ama sin pedir nada a cambio.<br><br>
+Los árboles y animales del bosque la consideran una parte vital de su ecosistema, casi una fuerza de la naturaleza misma. En tiempos de necesidad, Aelira aparece como un susurro en la brisa, guiando y protegiendo a todos los seres que habitan su mundo. A menudo, los habitantes del bosque sienten su presencia antes de verla, como si la tierra misma la llamara a su lado cuando el equilibrio está en peligro. `;
+                
                 } else if (contadorClics === 2) {
                     cargarPagina('extras/juego_arquero.html')
                 }
                 break;
-            
+
         }
 
         contadorClics = 0;
@@ -231,26 +244,26 @@ let vidaActual = vidaMaxima;
 function inicializarAtaques(prota, ataque) {
     switch (prota) {
         case "mago":
-            
 
-            
-            
 
-            
+
+
+
+
             function actualizarBarraVida_enemigo() {
                 let porcentaje = (vidaActual_enemigo / vidaMaxima_enemigo) * 100;
                 document.getElementById("barra-vida-enemigo").style.width = porcentaje + "%";
             }
 
-            
-            function recibirDanio_enemigo(danio_enemigo ) {
-                vidaActual_enemigo -= danio_enemigo ;
+
+            function recibirDanio_enemigo(danio_enemigo) {
+                vidaActual_enemigo -= danio_enemigo;
                 if (vidaActual_enemigo < 0) vidaActual_enemigo = 0;
                 actualizarBarraVida_enemigo();
             }
 
-            function curar_enemigo(vida_enemigo ) {
-                vidaActual_enemigo += vida_enemigo ;
+            function curar_enemigo(vida_enemigo) {
+                vidaActual_enemigo += vida_enemigo;
                 if (vidaActual_enemigo > vidaMaxima_enemigo) vidaActual_enemigo = vidaMaxima_enemigo;
                 actualizarBarraVida_enemigo();
             }
@@ -262,7 +275,7 @@ function inicializarAtaques(prota, ataque) {
 
             function recibirDanio(danio) {
                 vidaActual -= danio;
-                if (vidaActual < 0) vidaActual = 0; 
+                if (vidaActual < 0) vidaActual = 0;
                 actualizarBarraVida();
             }
 
@@ -276,8 +289,8 @@ function inicializarAtaques(prota, ataque) {
             switch (ataque) {
                 case 1:
                     reducirVida('enemigo', 5);
-                    alert(`🔥 El mago lanza una bola de fuego. Vida enemigo: ${vida_enemigo}`);
                     reducirVida('mago', 10);
+                    alert(`🔥 El mago lanza una bola de fuego. Vida enemigo: ${vida_enemigo}`);
                     recibirDanio(10)
                     recibirDanio_enemigo(5)
                     alert(`El enemigo ataca. Tu vida: ${vida_mago}`);
@@ -293,13 +306,13 @@ function inicializarAtaques(prota, ataque) {
                 case 3:
                     reducirVida('enemigo', 10);
                     alert(`🔥 El mago lanza un tsunami que no afecta como debetia al enemigo. Vida enemigo: ${vida_enemigo}`);
-                    reducirVida('mago',10);
+                    reducirVida('mago', 10);
                     recibirDanio(10)
                     recibirDanio_enemigo(10)
                     alert(`El enemigo ataca. Tu vida: ${vida_mago}`);
                     break;
                 case 4:
-                    
+
                     vida_mago += 10;
                     alert(`✨ El mago se cura. Vida mago: ${vida_mago}`);
                     curar(10)
@@ -314,15 +327,15 @@ function inicializarAtaques(prota, ataque) {
                 document.getElementById("barra-vida-enemigo").style.width = porcentaje + "%";
             }
 
-            
-            function recibirDanio_enemigo(danio_enemigo ) {
-                vidaActual_enemigo -= danio_enemigo ;
+
+            function recibirDanio_enemigo(danio_enemigo) {
+                vidaActual_enemigo -= danio_enemigo;
                 if (vidaActual_enemigo < 0) vidaActual_enemigo = 0;
                 actualizarBarraVida_enemigo();
             }
 
-            function curar_enemigo(vida_enemigo ) {
-                vidaActual_enemigo += vida_enemigo ;
+            function curar_enemigo(vida_enemigo) {
+                vidaActual_enemigo += vida_enemigo;
                 if (vidaActual_enemigo > vidaMaxima_enemigo) vidaActual_enemigo = vidaMaxima_enemigo;
                 actualizarBarraVida_enemigo();
             }
@@ -334,7 +347,7 @@ function inicializarAtaques(prota, ataque) {
 
             function recibirDanio(danio) {
                 vidaActual -= danio;
-                if (vidaActual < 0) vidaActual = 0; 
+                if (vidaActual < 0) vidaActual = 0;
                 actualizarBarraVida();
             }
 
@@ -365,13 +378,13 @@ function inicializarAtaques(prota, ataque) {
                 case 1:
                     reducirVida('enemigo', 10);
                     alert(`El guerrero realiza un ataque simple. Vida enemigo: ${vida_enemigo}`);
-                    reducirVida('mago',10);
+                    reducirVida('mago', 10);
                     recibirDanio(10)
                     recibirDanio_enemigo(10)
                     alert(`El enemigo ataca. Tu vida: ${vida_mago}`);
                     break;
                 case 4:
-                    
+
                     vida_mago += 10;
                     alert(`✨ El guerrero se cura. Vida guerrero: ${vida_mago}`);
                     curar(10)
@@ -386,15 +399,15 @@ function inicializarAtaques(prota, ataque) {
                 document.getElementById("barra-vida-enemigo").style.width = porcentaje + "%";
             }
 
-            
-            function recibirDanio_enemigo(danio_enemigo ) {
-                vidaActual_enemigo -= danio_enemigo ;
+
+            function recibirDanio_enemigo(danio_enemigo) {
+                vidaActual_enemigo -= danio_enemigo;
                 if (vidaActual_enemigo < 0) vidaActual_enemigo = 0;
                 actualizarBarraVida_enemigo();
             }
 
-            function curar_enemigo(vida_enemigo ) {
-                vidaActual_enemigo += vida_enemigo ;
+            function curar_enemigo(vida_enemigo) {
+                vidaActual_enemigo += vida_enemigo;
                 if (vidaActual_enemigo > vidaMaxima_enemigo) vidaActual_enemigo = vidaMaxima_enemigo;
                 actualizarBarraVida_enemigo();
             }
@@ -406,7 +419,7 @@ function inicializarAtaques(prota, ataque) {
 
             function recibirDanio(danio) {
                 vidaActual -= danio;
-                if (vidaActual < 0) vidaActual = 0; 
+                if (vidaActual < 0) vidaActual = 0;
                 actualizarBarraVida();
             }
 
@@ -437,13 +450,13 @@ function inicializarAtaques(prota, ataque) {
                 case 2:
                     reducirVida('enemigo', 10);
                     alert(`El arquero realiza un disparo de una unica flecha. Vida enemigo: ${vida_enemigo}`);
-                    reducirVida('mago',10);
+                    reducirVida('mago', 10);
                     recibirDanio(10)
                     recibirDanio_enemigo(10)
                     alert(`El enemigo ataca. Tu vida: ${vida_mago}`);
                     break;
                 case 4:
-                    
+
                     vida_mago += 10;
                     alert(`✨ El arquero se cura. Vida arquero: ${vida_mago}`);
                     curar(10)
