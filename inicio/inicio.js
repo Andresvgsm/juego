@@ -232,9 +232,39 @@ function reducirVida(objetivo, cantidad) {
     } else if (objetivo === 'enemigo') {
         vida_enemigo -= cantidad;
         if (vida_enemigo <= 0) {
-            cargarPagina('extras/victoria.html')
+            derrotar()
         }
     }
+}
+let nivel=1
+let nivel_enemigo=1
+let multiplicador=1
+let multiplicador_enemigo=1
+
+function derrotar() {
+    subir_nivel();
+    subir_nivel_enemigo();
+}
+
+function subir_nivel() {
+    nivel++;
+    multiplicador += 0.5;
+    document.getElementById("nivel").innerHTML = "Nivel: " + nivel;
+    vidaMaxima *= multiplicador;
+    vidaActual = vidaMaxima;
+    document.getElementById("barra-vida").style.width = "100%";
+    alert(`¡Subiste de nivel! Ahora eres nivel ${nivel}`);
+    alert(`Nuevas estadísticas: Vida ${vidaMaxima}`);
+}
+function subir_nivel_enemigo() {
+    nivel_enemigo++;
+    multiplicador_enemigo += 0.75;
+    document.getElementById("nivel_enemigo").innerHTML = "Nivel: " + nivel_enemigo;
+    vida_enemigo *= multiplicador_enemigo;
+    vidaActual_enemigo = vida_enemigo;
+    document.getElementById("barra-vida-enemigo").style.width = "100%";
+    alert(`¡Subiste de nivel! Ahora eres nivel ${nivel_enemigo}`);
+    alert(`Nuevas estadísticas: Vida ${vida_enemigo}`);
 }
 
 const vidaMaxima_enemigo = vida_enemigo;
@@ -360,28 +390,32 @@ function inicializarAtaques(prota, ataque) {
             actualizarBarraVida();
             switch (ataque) {
                 case 2:
-                    reducirVida('enemigo', 5);
+                    
                     alert(`El guerrero realiza un ataque con su escudo que le deja un facil golpe a su enemigo. Vida enemigo: ${vida_enemigo}`);
-                    reducirVida('mago', 10);
+                    
                     recibirDanio(10)
                     recibirDanio_enemigo(5)
                     alert(`El enemigo ataca. Tu vida: ${vida_mago}`);
+                    reducirVida('enemigo', 5);
+                    reducirVida('mago', 10);
                     break;
                 case 3:
-                    reducirVida('enemigo', 10);
-                    alert(`El guerrero realiza un doble ataque . Vida enemigo: ${vida_enemigo}`);
-                    reducirVida('mago', 5);
                     recibirDanio(5)
                     recibirDanio_enemigo(10)
+                    reducirVida('enemigo', 10);
+                    reducirVida('mago', 5);
+                    alert(`El guerrero realiza un doble ataque . Vida enemigo: ${vida_enemigo}`);
                     alert(`El enemigo ataca. Tu vida: ${vida_mago}`);
                     break;
                 case 1:
-                    reducirVida('enemigo', 10);
+                    
                     alert(`El guerrero realiza un ataque simple. Vida enemigo: ${vida_enemigo}`);
-                    reducirVida('mago', 10);
+                    
                     recibirDanio(10)
                     recibirDanio_enemigo(10)
                     alert(`El enemigo ataca. Tu vida: ${vida_mago}`);
+                    reducirVida('enemigo', 10);
+                    reducirVida('mago', 10);
                     break;
                 case 4:
 
